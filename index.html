@@ -5,37 +5,51 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@900&display=swap" rel="stylesheet">
     <title>Document</title>
 </head>
 <body>
     <div class="template">
-    <header>
-        <div class="header__organism">
-        <img class="logo" src="img/logo.png" alt="Logotipo">
-        <nav class="menu">
-            <ul class="menu__list">
-                <li class="menu__listElement">
-                    <ion-icon class="menu__linkIcon" name="basket"></ion-icon>
-                    <a class="menu__link" href="/">Menu</a>
-                </li>
-                <li class="menu__listElement">
-                    <ion-icon class="menu__linkIcon" name="basket"></ion-icon>
-                    <a class="menu__link" href="/">Menu</a>
-                </li>
-            </ul>
-        </nav>
-        <nav class="menu__mobile">
-            <ion-icon class="menu__mobileButton" name="menu"></ion-icon>
-        </nav>
-        <nav class="login">
-        <a class="login__button" href="/">
-            <span class="login__text">Entrar</span>
-            <ion-icon class="login__icon" name="person-circle"></ion-icon></a>
-        </nav>
+        
+            <aside class="menu__side --isHidden">
+            </aside>
+            <div class="content__organism">
+                <header>
+                    <div class="header__organism">
+                        <img class="logo" src="img/logo.svg" alt="Logotipo">
+                        <nav class="menu">
+                            <ul class="menu__list">
+                                <li class="menu__listElement">
+                                    <ion-icon class="menu__linkIcon" name="basket"></ion-icon>
+                                    <a class="menu__link" style="color: #7569DE;" href="/">Planos</a>
+                                </li>
+                                <li class="menu__listElement">
+                                    <ion-icon class="menu__linkIcon" name="basket"></ion-icon>
+                                    <a class="menu__link" style="color: #FE6845;" href="/">Promoções</a>
+                                </li>
+                                <li class="menu__listElement">
+                                    <ion-icon class="menu__linkIcon" name="basket"></ion-icon>
+                                    <a class="menu__link" style="color: #A5CE55" href="/">Receitas</a>
+                                </li>
+                            </ul>
+                        </nav>
+                        <nav class="menu__mobile">
+                            <ion-icon class="menu__mobileButton" name="menu"></ion-icon>
+                        </nav>
+                        <nav class="login">
+                        <a class="login__button" href="/">
+                            <span class="login__text">Entrar</span>
+                            <ion-icon class="login__icon" name="person-circle"></ion-icon></a>
+                        </nav>
+                    </div>
+                </header>
+            </div>
+        
     </div>
-    </header>
-</div>
 <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+<script src="script.js"></script>
 </body>
 </html>

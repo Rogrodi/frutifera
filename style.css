@@ -3,6 +3,7 @@ body
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    background: #F1FFD6;
 }
 
 html
@@ -20,8 +21,9 @@ img
 .template
 {
     display: grid;
-    row-gap: 8px;
+    row-gap: 16px;
     width: 100%;
+    grid-template-columns: 1fr auto;
 }
 
 
@@ -40,10 +42,11 @@ header
     width: 75%;
     justify-content: space-between;
     align-items: center;
-    height: 40px;
-    padding: 16px;
-    background: #fff;
+    height: 60px;
+    padding: 16px 16px 32px 16px;
+    background-image: url(img/background.svg);
     min-width: 320px;
+    filter: drop-shadow(0px 6px 12px rgba(0, 0, 0, 0.12));
 }
 
 /* ------- Logo ------- */
@@ -57,11 +60,13 @@ header
     display: flex;
     height: 100%;
     justify-content: space-between;
+    font-family: 'Rubik', sans-serif;
+    order: 2;
 }
 
 .menu__list
 {
-    column-gap: 16px;
+    column-gap: 36px;
     display: flex;
     list-style: none;
     padding: 0;
@@ -87,6 +92,7 @@ header
     align-items: center;
     height: 100%;
     text-decoration: none;
+    font-size: 14px;
 }
 
 .menu__mobile
@@ -98,6 +104,7 @@ header
 
 .login
 {
+    order: 3;
     display: flex;
     height: 100%;
     justify-content: center;
@@ -108,10 +115,12 @@ header
 }
 .login__button{
     text-decoration: none;
-    height: 100%;
+    height: 40px;
     width: 100%;
     display: flex; 
+    border: 4px solid #7569DE;
     justify-content: center;
+    border-radius: 50px;
     align-items: center;
 }
 .login__icon
@@ -119,15 +128,30 @@ header
     display: none;
 }
 
+/* ------- Menu Mobile ------- */
+
+
+.menu__side
+{
+    display: flex;
+    height: 100%;
+    background-color:#DEFAA5;
+    
+}
+
+.content__organism{
+    display: flex;
+    height: 1200px;
+}
+
 /* ------- Mobile ------- */
 
-@media only screen and (max-width:600px){
+@media only screen and (max-width:800px){
     
 
     .header__organism
     {
-        position: fixed;
-        width: 90%;
+        width: 100%;
     }
 
     .menu__mobile
@@ -142,7 +166,7 @@ header
     {
         min-width: 45px;
         cursor: pointer;
-        font-size: 2em;
+        font-size: 24px;
     }
 
     .logo
@@ -155,6 +179,10 @@ header
     {
         flex-shrink: 1;
         order: 3;
+        border: none;
+    }
+    .login__button{
+        border: none;
     }
 
     .login__text
@@ -169,12 +197,66 @@ header
     }
 
     .menu
-    {
-        display: none;
+    {   
+        height: 100%;
+        width: 100%;
+    }
+
+    .menu__list{
+        width: 100%;
+        height: 100%;
+        flex-flow: column nowrap;
     }
 
     .menu__linkIcon
     {
         display: flex;
+       width: 45px;
     }
+
+    .menu__link{
+        height: 40px;
+      
+        
+    }
+}
+
+
+@keyframes menuEfect 
+{
+    from
+    {
+        transform: translateX(-99px);
+    }
+    to
+    {
+        transform: translateX(0);
+    }
+}
+
+@keyframes teste
+{   
+    from
+    {
+        transform: translateX(0);
+    }
+    to
+    {
+        transform: translateX(-99px);
+    }
+}
+
+.--isHidden
+{
+  
+    display: none;
+    
+}
+
+.--isVisible
+{
+    animation-name: menuEfect;
+    animation-duration: .5s;
+    animation-fill-mode: forwards;
+    display: initial;
 }
