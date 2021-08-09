@@ -42,9 +42,8 @@ header
     width: 75%;
     justify-content: space-between;
     align-items: center;
-    height: 60px;
+    height: 40px;
     padding: 16px 16px 32px 16px;
-    background-image: url(img/background.svg);
     min-width: 320px;
     filter: drop-shadow(0px 6px 12px rgba(0, 0, 0, 0.12));
 }
@@ -61,6 +60,7 @@ header
     height: 100%;
     justify-content: space-between;
     font-family: 'Rubik', sans-serif;
+    font-weight: 500;
     order: 2;
 }
 
@@ -72,7 +72,9 @@ header
     padding: 0;
     margin: 0;
     height: 100%;
+    opacity: 0.6;
 }
+
 
 .menu__listElement
 {
@@ -90,9 +92,16 @@ header
 {
     display: flex;
     align-items: center;
-    height: 100%;
+    height: 24px;
+    padding: 8px;
     text-decoration: none;
     font-size: 14px;
+    color: #2D322D;
+  
+}
+
+.menu__link:hover{
+    color:#7569DE;
 }
 
 .menu__mobile
@@ -115,17 +124,33 @@ header
 }
 .login__button{
     text-decoration: none;
-    height: 40px;
+    height: 20px;
     width: 100%;
     display: flex; 
-    border: 4px solid #7569DE;
-    justify-content: center;
-    border-radius: 50px;
+    border: 2px solid #7569DE;
+    justify-content: space-between;
+    border-radius: 12px;
     align-items: center;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    color: #7569DE;
+    padding:8px;
+    
+}
+
+.login__button:hover{
+    background: #7569DE;
+    color: white;
 }
 .login__icon
 {
-    display: none;
+  font-size: 24px;
+}
+
+.login__text{
+    text-align: center;
+    flex-grow: 1;
 }
 
 /* ------- Menu Mobile ------- */
@@ -158,15 +183,15 @@ header
     {
         order: 1;
         display: flex;
-        height: 100%;
         align-items: center;
     }
 
     .menu__mobileButton
     {
-        min-width: 45px;
+        padding: 8px;
         cursor: pointer;
         font-size: 24px;
+        color: #7569DE;
     }
 
     .logo
@@ -177,12 +202,22 @@ header
 
     .login
     {
+        justify-content: flex-end;
         flex-shrink: 1;
         order: 3;
-        border: none;
+        flex-basis: initial;
+        flex-shrink: initial;
+        
     }
     .login__button{
+        
+        width: initial;
         border: none;
+    }
+
+    .login__button:hover{
+        background: initial;
+        color: #7569DE;
     }
 
     .login__text
@@ -192,7 +227,7 @@ header
 
     .login__icon
     {
-        font-size: 2em;
+        font-size: 24px;
         display: flex;
     }
 
@@ -211,7 +246,7 @@ header
     .menu__linkIcon
     {
         display: flex;
-       width: 45px;
+        width: 45px;
     }
 
     .menu__link{

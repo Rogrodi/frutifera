@@ -28,6 +28,7 @@ function resize(e){
         menuAsideOrganism.appendChild(menuOrganism);
         } else {
             headerOrganism.appendChild(menuOrganism);
+            menuAsideOrganism.classList.add('--isHidden')
         }
 }
 
